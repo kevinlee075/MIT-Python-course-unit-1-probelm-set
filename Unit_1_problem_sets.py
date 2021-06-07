@@ -12,3 +12,13 @@ for letter in s: #examine whether s has vowels using loop
      or letter == 'o' or letter == 'u': 
      Vowels += 1 #count vowels
 print('Number of vowels: ' + str(Vowels)) #finally print number of vowels
+
+s = 'feasbobwduvelm3bnsdfbowefbobdfjewkeweu'
+counts = 0
+for letter in s:
+    if 'bob' in letter:
+        counts += 1
+print('Number of times bob occurs is: ' + str(counts))
+
+        
+        
