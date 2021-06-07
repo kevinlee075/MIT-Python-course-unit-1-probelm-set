@@ -17,7 +17,7 @@ print('Number of vowels: ' + str(Vowels)) #finally print number of vowels
 s = str(input('s = '))
 counts = 0
 n = 0
-while n < len(s) - 1:
+while n < len(s) - 2:
     if s[n] == 'b' and s[n+1] == 'o' and s[n+2] == 'b':
         counts += 1
         n += 1
