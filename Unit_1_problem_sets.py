@@ -13,15 +13,16 @@ for letter in s: #examine whether s has vowels using loop
      Vowels += 1 #count vowels
 print('Number of vowels: ' + str(Vowels)) #finally print number of vowels
 
-s = 'feasbobwduvelm3bnsdfbowefbobdfjewkeweu'
+
+s = str(input('s = '))
 counts = 0
-for i in s:
-    if i == 'b':
-        i += str(1)
-        if i in s == 'o':
-            i += str(1)
-            if i in s == 'b':
-                counts += 1              
+n = 0
+while n < len(s):
+    if s[n] == 'b' and s[n+1] == 'o' and s[n+2] == 'b':
+        counts += 1
+        n += 1
+    else:
+        n += 1                            
 print('Number of times bob occurs is: ' + str(counts))
     
     
