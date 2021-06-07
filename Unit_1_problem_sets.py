@@ -16,8 +16,12 @@ print('Number of vowels: ' + str(Vowels)) #finally print number of vowels
 s = 'feasbobwduvelm3bnsdfbowefbobdfjewkeweu'
 counts = 0
 for i in s:
-    if i == 'bob':
-        counts += 1
+    if i == 'b':
+        i += str(1)
+        if i in s == 'o':
+            i += str(1)
+            if i in s == 'b':
+                counts += 1              
 print('Number of times bob occurs is: ' + str(counts))
     
     
