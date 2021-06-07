@@ -14,8 +14,13 @@ for letter in s: #examine whether s has vowels using loop
 print('Number of vowels: ' + str(Vowels)) #finally print number of vowels
 
 s = 'feasbobwduvelm3bnsdfbowefbobdfjewkeweu'
-x = count('bob') in s
-print('Number of times bob occurs is: ' + str(x))
+counts = 0
+for i in s:
+    if i == 'bob':
+        counts += 1
+print('Number of times bob occurs is: ' + str(counts))
+    
+    
 
         
         
