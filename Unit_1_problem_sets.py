@@ -14,16 +14,20 @@ for letter in s: #examine whether s has vowels using loop
 print('Number of vowels: ' + str(Vowels)) #finally print number of vowels
 
 
-s = str(input('s = '))
-counts = 0
-n = 0
-while n < len(s) - 2:
+s = str(input('s = ')) #define s as an input string
+counts = 0 #initial counts
+n = 0 #initial letter place
+while n < len(s) - 2: #examine the place from '0' to 'third to last'
     if s[n] == 'b' and s[n+1] == 'o' and s[n+2] == 'b':
-        counts += 1
-        n += 1
+        #examine whether every three consecutive places are 'bob'
+        counts += 1 #if yes, count one
+        n += 1 #move to the next place
     else:
-        n += 1                            
-print('Number of times bob occurs is: ' + str(counts))
+        n += 1 # if no, no count but move to the next place                            
+print('Number of times bob occurs is: ' + str(counts)) #finally print results
+
+
+
     
     
 
