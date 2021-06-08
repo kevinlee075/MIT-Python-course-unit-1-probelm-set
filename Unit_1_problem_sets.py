@@ -32,11 +32,10 @@ n = 0
 x = str(s[n])
 for n in range(len(s)-1):
     if s[n] <= s[n+1]:
+        x = str(s[n])
         x += str(s[n+1])
-        n += 1
     else:
         n += 1
-        x = str(s[n])
 print('Longest substring in alphabetical order is: ' + str(x))
     
     
