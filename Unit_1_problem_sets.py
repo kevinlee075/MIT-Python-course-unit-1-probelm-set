@@ -27,7 +27,17 @@ while n < len(s) - 2: #examine the place from '0' to 'third to last'
 print('Number of times bob occurs is: ' + str(counts)) #finally print results
 
 
-
+s = str(input('s = ')) #define s as an input string
+n = 0
+x = str(s[n])
+for n in range(len(s)-1):
+    if s[n] <= s[n+1]:
+        x += str(s[n+1])
+        n += 1
+    else:
+        n += 1
+        x = str(s[n])
+print('Longest substring in alphabetical order is: ' + str(x))
     
     
 
