@@ -40,26 +40,27 @@ for n in range(1, len(s)):
         break
 for o in range(n, len(s)):
     if s[o] <= s[o+1]:
-        b = s[n:o+2]
+        c = s[n:o+2]
     else:
-        b = s[n:o+1]
+        c = s[n:o+1]
         break
 for p in range(o+1, len(s)):
     if s[p-1] > s[p] and s[p] <= s[p+1]:
         break
 for q in range(p, len(s)):
     if s[q] <= s[q+1]:
-        c = s[p:q+2]
+        d = s[p:q+2]
     else:
-        c = s[p:q+1]
+        d = s[p:q+1]
         break
-if len(a) >= len(b) and len(a) >= len(c):
+if len(a) >= len(c) and len(a) >= len(d):
     print('Longest substring in alphabetical order is: ' + a)
-elif len(b) > len(a) and len(b) >= len(c):
-    print('Longest substring in alphabetical order is: ' + b)
-else:
+elif len(c) > len(a) and len(c) >= len(d):
     print('Longest substring in alphabetical order is: ' + c)
-    
+else:
+    print('Longest substring in alphabetical order is: ' + d)
+
+
     
 
         
