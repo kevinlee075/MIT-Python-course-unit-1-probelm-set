@@ -31,7 +31,6 @@ s = str(input('s = ')) #define s as an input string
 a = ''
 if s[0] <= s[1]:
     a = s[0:2]
-    m = 1
     for m in range(1, len(s)):
         if s[m] <= s[m+1]:
             a = s[0:m+2]
