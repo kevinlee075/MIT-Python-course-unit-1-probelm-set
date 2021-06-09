@@ -32,11 +32,11 @@ for l in range(1, len(s)):
     if s[l-1] > s[l] and s[l] <= s[l+1]:
         a = l
         break
-for a in range(a+1, len(s)):
-    if s[a-1] <= s[a] and s[a] <= s[a+1]:
+for n in range(a+1, len(s)):
+    if s[n-1] <= s[n] and s[n] <= s[n+1]:
         b = len(s) - l - 1
         break        
-print('order = ' + str[a:b])
+print('order = ' + str(s[a:b]))
     
     
 
