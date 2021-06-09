@@ -28,15 +28,17 @@ print('Number of times bob occurs is: ' + str(counts)) #finally print results
 
 
 s = str(input('s = ')) #define s as an input string
-for l in range(1, len(s)):
-    if s[l-1] > s[l] and s[l] <= s[l+1]:
-        a = l
-        break
-for n in range(a+1, len(s)):
-    if s[n-1] <= s[n] and s[n] <= s[n+1]:
-        b = len(s) - l - 1
-        break        
-print('order = ' + str(s[a:b]))
+a = ''
+if s[0] <= s[1]:
+    a = s[0:2]
+    m = 1
+    for m in range(1, len(s)):
+        if s[m] <= s[m+1]:
+            a = s[0:m+2]
+        else:
+            a = s[0:m+1]
+            break              
+print('order = ' + a)
     
     
 
