@@ -36,8 +36,22 @@ if s[0] <= s[1]:
             a = s[0:m+2]
         else:
             a = s[0:m+1]
-            break              
-print('order = ' + a)
+            break
+else:
+    for n in range(1, len(s)):
+        if s[n-1] > s[n] and s[n] <= s[n+1]:
+            b = s[n:n+2]
+            break
+        else:
+            n += 1
+    o = n
+    for p in range(o, len(s)):
+        if s[p] <= s[p+1]:
+            b = s[o:p+2]
+        else:
+            b = s[o:p+1]
+            break
+print('order = ' + b)
     
     
 
