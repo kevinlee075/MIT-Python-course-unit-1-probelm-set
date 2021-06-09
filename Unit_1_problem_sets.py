@@ -28,30 +28,37 @@ print('Number of times bob occurs is: ' + str(counts)) #finally print results
 
 
 s = str(input('s = ')) #define s as an input string
-a = ''
 if s[0] <= s[1]:
-    a = s[0:2]
     for m in range(1, len(s)):
         if s[m] <= s[m+1]:
             a = s[0:m+2]
         else:
             a = s[0:m+1]
             break
+for n in range(1, len(s)):
+    if s[n-1] > s[n] and s[n] <= s[n+1]:
+        break
+for o in range(n, len(s)):
+    if s[o] <= s[o+1]:
+        b = s[n:o+2]
+    else:
+        b = s[n:o+1]
+        break
+for p in range(o+1, len(s)):
+    if s[p-1] > s[p] and s[p] <= s[p+1]:
+        break
+for q in range(p, len(s)):
+    if s[q] <= s[q+1]:
+        c = s[p:q+2]
+    else:
+        c = s[p:q+1]
+        break
+if len(a) >= len(b) and len(a) >= len(c):
+    print('Longest substring in alphabetical order is: ' + a)
+elif len(b) > len(a) and len(b) >= len(c):
+    print('Longest substring in alphabetical order is: ' + b)
 else:
-    for n in range(1, len(s)):
-        if s[n-1] > s[n] and s[n] <= s[n+1]:
-            b = s[n:n+2]
-            break
-        else:
-            n += 1
-    o = n
-    for p in range(o, len(s)):
-        if s[p] <= s[p+1]:
-            b = s[o:p+2]
-        else:
-            b = s[o:p+1]
-            break
-print('order = ' + b)
+    print('Longest substring in alphabetical order is: ' + c)
     
     
 
