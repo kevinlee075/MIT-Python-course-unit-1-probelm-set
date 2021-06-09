@@ -31,11 +31,12 @@ s = str(input('s = ')) #define s as an input string
 for l in range(1, len(s)):
     if s[l-1] > s[l] and s[l] <= s[l+1]:
         a = l
-    elif s[l-1] <= s[l] and s[l] <= s[l+1]:
+        break
+for a in range(a+1, len(s)):
+    if s[a-1] <= s[a] and s[a] <= s[a+1]:
         b = len(s) - l - 1
-        
-
-print('count = ' + )
+        break        
+print('order = ' + str[a:b])
     
     
 
