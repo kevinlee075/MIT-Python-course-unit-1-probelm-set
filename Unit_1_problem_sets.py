@@ -28,15 +28,14 @@ print('Number of times bob occurs is: ' + str(counts)) #finally print results
 
 
 s = str(input('s = ')) #define s as an input string
-a = ''
-b = ''
-for i in range(len(s)):
-    a += s[i]
-    if len(a) > len(b):
-        b = a
-    if i == len(s) - 1 and a == b + s[-1]:
-        b = a
-        break
+a = '' #define a as the checking place
+b = '' #define b as the substring which should be memorized
+for i in range(len(s)): #checking places from 0 to end
+    a += s[i] #add every checking place first
+    if len(a) > len(b): #memorize a if a is in order and follow the following check
+        b = a 
+    if i == len(s) - 1 and a == b + s[-1]: #check whether b is in the last substring
+        b = a #if yes, the final letter should be added into b
     if i < len(s)-1:
         if s[i] > s[i+1]:
             a = ''    
