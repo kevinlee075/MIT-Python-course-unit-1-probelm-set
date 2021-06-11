@@ -36,10 +36,10 @@ for i in range(len(s)): #checking places from 0 to end
         b = a 
     if i == len(s) - 1 and a == b + s[-1]: #check whether b is in the last substring
         b = a #if yes, the final letter should be added into b
-    if i < len(s)-1:
-        if s[i] > s[i+1]:
-            a = ''    
-print('Longest substring in alphabetical order is: ' + b)
+    if i < len(s)-1: #check places from 0 to the second last
+        if s[i] > s[i+1]: #if next one is not in order
+            a = ''    #a should be cleared so that next shbstring could be checked
+print('Longest substring in alphabetical order is: ' + b) #finally print results
 
 
     
