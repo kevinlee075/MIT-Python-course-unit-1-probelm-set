@@ -28,19 +28,19 @@ print('Number of times bob occurs is: ' + str(counts)) #finally print results
 
 
 s = str(input('s = ')) #define s as an input string
-t = 'z' + s
-a = 1
-for i in range(1, len(s)):
-    if t[i-1] > t[i] and t[i] <= t[i+1]:
+a = ''
+b = ''
+for i in range(len(s)):
+    a += s[i]
+    if len(a) > len(b):
+        b = a
+    if i == len(s) - 1 and a == b + s[-1]:
+        b = a
         break
-for j in range(i, len(s)):
-    if t[j] <= t[j+1]:
-        a += 1
-    else:
-        a == a
-        break
-t = s[i+a-2:len(s)]
-print('order= ' + s[i-1:i+a-1])
+    if i < len(s)-1:
+        if s[i] > s[i+1]:
+            a = ''    
+print('Longest substring in alphabetical order is: ' + b)
 
 
     
