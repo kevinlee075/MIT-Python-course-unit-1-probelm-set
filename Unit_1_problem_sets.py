@@ -41,9 +41,6 @@ for i in range(len(s)): #checking places from 0 to end
             a = ''    #a should be cleared so that next shbstring could be checked
 print('Longest substring in alphabetical order is: ' + b) #finally print results
 
-sfaaergre
-
-
     
 
         
